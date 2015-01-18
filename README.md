@@ -1,6 +1,6 @@
 # switchery-rails
 
-Switchery for Rails.
+[Switchery](https://github.com/abpetkov/switchery) for Rails.
 
 ## Installation
 
