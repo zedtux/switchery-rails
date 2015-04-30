@@ -14,6 +14,6 @@ task :update_switchery do
 
   FileUtils.mkdir_p('vendor/assets/javascripts')
   FileUtils.mkdir_p('vendor/assets/stylesheets')
-  download_switchery(Switchery::Rails::SWITCHERY_VERSION)
+  download_switchery(Switchery::Rails::VERSION)
   puts "\e[32mDone!\e[0m"
 end
