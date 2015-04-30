@@ -20,6 +20,13 @@
 # Downlading Switchery 0.8.0 ...
 # Done!
 #
+# How to release the gem
+# ----------------------
+#
+# Docker will need your SSH key in order to push to Github and your Rubygems
+# credentials in order to publish the new gem version:
+#
+# $ sudo docker run --rm -v ~/.ssh/:/root/.ssh/ -v ~/.gem/:/root/.gem/ -v `pwd`:/gem/ -it zedtux/switchery-rails rake release
 
 # ~~~~ Image base ~~~~
 # Base image with the latest Ruby only
