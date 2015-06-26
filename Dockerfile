@@ -4,7 +4,7 @@
 # =============
 #
 # $ sudo docker build -t zedtux/switchery-rails .
-# $ sudo docker run -it zedtux/switchery-rails
+# $ sudo docker run --rm zedtux/switchery-rails
 # rake build             # Build switchery-rails-0.1.0.gem into the pkg directory
 # rake install           # Build and install switchery-rails-0.1.0.gem into system gems
 # rake install:local     # Build and install switchery-rails-0.1.0.gem into system gems without network access
@@ -16,7 +16,7 @@
 #
 # Update the file `lib/switchery/rails/version.rb` in order to set the Switchery version to download then:
 #
-# $ sudo docker run --rm -v `pwd`:/gem/ -it zedtux/switchery-rails rake update_switchery
+# $ sudo docker run --rm -v `pwd`:/gem/ zedtux/switchery-rails rake update_switchery
 # Downlading Switchery 0.8.0 ...
 # Done!
 #
@@ -26,7 +26,7 @@
 # Docker will need your SSH key in order to push to Github and your Rubygems
 # credentials in order to publish the new gem version:
 #
-# $ sudo docker run --rm -v ~/.ssh/:/root/.ssh/ -v ~/.gem/:/root/.gem/ -v `pwd`:/gem/ -it zedtux/switchery-rails rake release
+# $ sudo docker run --rm -v ~/.ssh/:/root/.ssh/ -v ~/.gem/:/root/.gem/ -v `pwd`:/gem/ zedtux/switchery-rails rake release
 
 # ~~~~ Image base ~~~~
 # Base image with the latest Ruby only
