@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DOCKER_IMAGE_NAME="$USER/switchery-rails"
-LIBRARY_NEW_VERSION=`cat lib/**/*.rb | grep VERSION | awk '{ print $3 }' | tr -d "'"`
+LIBRARY_NEW_VERSION=`cat lib/switchery/rails/version.rb | grep VERSION | awk '{ print $3 }' | tr -d "'"`
 
 LIBRARY_UPDATED=`git status --porcelain | grep -v "lib/switchery/rails/version.rb"`
 if [[ -n "$LIBRARY_UPDATED" ]]; then
