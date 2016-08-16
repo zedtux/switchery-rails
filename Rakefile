@@ -2,7 +2,7 @@ require 'bundler/gem_tasks'
 require 'fileutils'
 
 desc 'Update the Switchery Javascript and CSS files'
-task :update_switchery do
+task :update do
   def download_switchery(version)
     base_url = 'https://raw.githubusercontent.com/abpetkov/switchery'
     puts "Downlading Switchery #{version} ..."
